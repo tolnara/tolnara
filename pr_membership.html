@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>프리미엄 멤버쉽 상품 제공 정책 · 라씨매매비서</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  --bg:#FBFBF9; --surface:#FFFFFF; --ink:#1F2421; --ink-2:#5A605C; --line:#E3E4DF;
+  --free:#0F6E56; --free-bg:#E1F5EE; --free-ink:#04342C;
+  --wait:#854F0B; --wait-bg:#FAEEDA; --wait-ink:#412402;
+  --none:#5F5E5A; --none-bg:#F1EFE8; --none-ink:#2C2C2A;
+  --no:#B3261E; --no-bg:#FCE8E6;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#141816; --surface:#1B201D; --ink:#E6E9E6; --ink-2:#A2A9A4; --line:#2E3531;
+    --free:#5DCAA5; --free-bg:#0F3027; --free-ink:#C9F0E2;
+    --wait:#E0A45A; --wait-bg:#3A2A12; --wait-ink:#F6DDB8;
+    --none:#B4B2A9; --none-bg:#2A2A27; --none-ink:#E6E4DC;
+    --no:#F2A097; --no-bg:#3A1C19;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141816; --surface:#1B201D; --ink:#E6E9E6; --ink-2:#A2A9A4; --line:#2E3531;
+  --free:#5DCAA5; --free-bg:#0F3027; --free-ink:#C9F0E2;
+  --wait:#E0A45A; --wait-bg:#3A2A12; --wait-ink:#F6DDB8;
+  --none:#B4B2A9; --none-bg:#2A2A27; --none-ink:#E6E4DC;
+  --no:#F2A097; --no-bg:#3A1C19;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 16px);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic",system-ui,sans-serif;
+  font-size:16px;line-height:1.7;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:var(--free)}
+:focus-visible{outline:2px solid var(--free);outline-offset:2px;border-radius:4px}
+
+.layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:56px;max-width:1180px;margin:0 auto;padding:48px 32px 96px}
+nav.toc{position:sticky;top:calc(env(safe-area-inset-top,0px) + 32px);align-self:start;font-size:14px}
+nav.toc p{margin:0 0 12px;color:var(--ink-2);font-weight:600}
+nav.toc ol{list-style:none;margin:0;padding:0;border-left:1px solid var(--line)}
+nav.toc a{display:block;padding:6px 0 6px 16px;margin-left:-1px;border-left:2px solid transparent;color:var(--ink-2);text-decoration:none}
+nav.toc a:hover{color:var(--ink);border-left-color:var(--free)}
+
+main{max-width:820px;min-width:0}
+header.doc{padding-bottom:32px;border-bottom:1px solid var(--line);margin-bottom:8px}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--wait);background:var(--wait-bg);padding:4px 10px;border-radius:999px}
+.status::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+h1{font-size:clamp(28px,4.2vw,40px);line-height:1.25;letter-spacing:-0.02em;font-weight:750;margin:16px 0 20px}
+dl.meta{display:grid;grid-template-columns:auto 1fr;gap:6px 20px;margin:0;font-size:15px}
+dl.meta dt{color:var(--ink-2)}
+dl.meta dd{margin:0}
+
+section{padding-top:48px}
+h2{font-size:24px;letter-spacing:-0.01em;line-height:1.35;margin:0 0 20px;display:flex;gap:12px;align-items:baseline}
+h2 .n{color:var(--free);font-variant-numeric:tabular-nums;font-weight:700}
+h3{font-size:18px;margin:32px 0 12px;line-height:1.4}
+p,li{max-width:72ch}
+ul{padding-left:1.2em}
+li{margin:4px 0}
+strong{font-weight:650}
+
+.tbl{overflow-x:auto;margin:16px 0;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14.5px;line-height:1.55}
+th,td{padding:11px 14px;text-align:left;vertical-align:top;border-bottom:1px solid var(--line)}
+tr:last-child td{border-bottom:0}
+th{font-weight:600;color:var(--ink-2);background:var(--none-bg);white-space:nowrap}
+td.c,th.c{text-align:center}
+td.id{font-variant-numeric:tabular-nums;color:var(--ink-2);white-space:nowrap}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.88em;background:var(--none-bg);padding:2px 6px;border-radius:4px}
+
+.mark{display:inline-block;min-width:26px;font-weight:700}
+.yes{color:var(--free)} .no{color:var(--no)}
+.pill{display:inline-block;font-size:13px;font-weight:600;padding:2px 9px;border-radius:999px;white-space:nowrap}
+.pill.free{background:var(--free-bg);color:var(--free-ink)}
+.pill.wait{background:var(--wait-bg);color:var(--wait-ink)}
+.pill.none{background:var(--none-bg);color:var(--none-ink)}
+.pill.no{background:var(--no-bg);color:var(--no)}
+
+.note{margin:16px 0;padding:14px 18px;border-left:3px solid var(--free);background:var(--surface);border-radius:0 8px 8px 0}
+.note p{margin:0}
+.note.warn{border-left-color:var(--no);background:var(--no-bg)}
+
+.flow{margin:16px 0;padding:24px 16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow-x:auto}
+.flow pre.mermaid{margin:0;display:flex;justify-content:center;background:none}
+.legend{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:14px;color:var(--ink-2);margin:12px 0 0}
+
+.summary{margin-top:8px;padding:24px 28px;border-radius:12px;background:var(--free-bg);color:var(--free-ink);font-size:17px;line-height:1.8}
+.summary p{margin:0;max-width:none}
+
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr;gap:0;padding:28px 18px 72px}
+  nav.toc{position:static;margin-bottom:24px;padding:16px;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+  nav.toc ol{columns:2;column-gap:16px;border-left:0}
+  nav.toc a{padding:4px 0;border-left:0}
+}
+@media print{
+  nav.toc{display:none}
+  .layout{display:block;padding:0}
+  section{break-inside:auto} .tbl{break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<nav class="toc" aria-label="목차">
+  <p>목차</p>
+  <ol>
+    <li><a href="#s1">1. 정책 개요</a></li>
+    <li><a href="#s2">2. 결제 유형</a></li>
+    <li><a href="#s3">3. 상태별 처리 규칙</a></li>
+    <li><a href="#s4">4. 시나리오 매트릭스</a></li>
+    <li><a href="#s5">5. 알림 정책</a></li>
+    <li><a href="#s6">6. 기능별 진입 경로</a></li>
+    <li><a href="#s7">7. 요약</a></li>
+  </ol>
+</nav>
+
+<main>
+<header class="doc">
+  <span class="status">초안 v0.1</span>
+  <h1>프리미엄 멤버쉽 상품 제공 정책</h1>
+  <dl class="meta">
+    <dt>서비스</dt><dd>라씨매매비서</dd>
+    <dt>혜택 제공 주체</dt><dd>프리미엄 계정</dd>
+    <dt>혜택 대상 상품</dt><dd>스타일 패스</dd>
+  </dl>
+</header>
+
+<!-- 1 -->
+<section id="s1">
+<h2><span class="n">1</span>정책 개요</h2>
+
+<h3>1.1 목적</h3>
+<p>프리미엄 계정을 <strong>2개월 차 이상 이용하는 고객</strong>에게 스타일 패스를 무료로 제공하여, 프리미엄 계정의 <strong>2개월 차 진입률과 유지율(리텐션)</strong>을 높인다.</p>
+
+<h3>1.2 기본 원칙</h3>
+<div class="tbl"><table>
+<thead><tr><th>#</th><th>원칙</th><th>내용</th></tr></thead>
+<tbody>
+<tr><td class="id">P1</td><td>자격 원칙</td><td>스타일 패스는 <strong>프리미엄 2개월 차 이상</strong>에 제공된다.</td></tr>
+<tr><td class="id">P2</td><td>종속 원칙</td><td>패스는 <strong>프리미엄 계정에 종속</strong>된다. 프리미엄 결제 기간과 <strong>동일한 기간</strong>으로 생성된다.</td></tr>
+<tr><td class="id">P3</td><td>무상 원칙</td><td>패스 자체에 대한 별도 과금은 발생하지 않는다. (단독 구매 상품과 별개)</td></tr>
+<tr><td class="id">P4</td><td>동반 종료 원칙</td><td>프리미엄 계정이 종료되면 패스도 <strong>동시에 종료</strong>된다.</td></tr>
+<tr><td class="id">P5</td><td>진입 경로 원칙</td><td>기능별로 진입 경로가 다르다. <strong>예약은 프리미엄 계정 라운지 단독</strong>, 무료 받기와 이용기간 확인은 <strong>복수 경로</strong>를 지원한다. (<a href="#s6">§6</a> 참고)</td></tr>
+</tbody></table></div>
+
+<h3>1.3 용어 정의</h3>
+<div class="tbl"><table>
+<thead><tr><th>용어</th><th>정의</th></tr></thead>
+<tbody>
+<tr><td><strong>개월 차</strong></td><td>프리미엄 계정의 이용 회차. 최초 결제로 시작되는 기간이 <strong>1개월 차</strong>, 그 다음 결제(또는 다음 이용 기간)가 <strong>2개월 차</strong>.</td></tr>
+<tr><td><strong>무료 예약</strong></td><td>프리미엄 1개월 차에 미리 신청해 두는 행위. 신청 시점에는 패스를 이용할 수 없으며, 2개월 차 진입 시 자동으로 상품이 생성된다.</td></tr>
+<tr><td><strong>무료 받기</strong></td><td>프리미엄 2개월 차 이상에서 즉시 패스를 지급받는 행위.</td></tr>
+<tr><td><strong>동기 생성</strong></td><td>프리미엄 결제가 발생할 때마다 동일 기간으로 패스를 자동 재생성하는 처리.</td></tr>
+</tbody></table></div>
+
+<h3>1.4 프로세스 안내도</h3>
+<div class="flow">
+<pre class="mermaid">
+flowchart TD
+    A["프리미엄 라운지 · 패스 결제 화면 진입"] --> B["프리미엄 상태 판정<br/>결제 유형 · 결제 회차"]
+    B --> C1["6개월 정기<br/>1개월 차부터 대상"]
+    B --> C2["1개월 정기<br/>1개월 차"]
+    B --> C3["1개월 단건<br/>1회차"]
+    B --> C4["2개월 차 이상<br/>단건 2회차 포함"]
+    C1 --> D1["즉시 생성<br/>프리미엄 기간과 동일 6개월"]
+    C2 --> D2["무료 예약<br/>라운지 전용 · 이용 대기"]
+    C3 --> D3["예약 불가<br/>안내 문구만 노출"]
+    C4 --> D4["무료 받기<br/>잔여 기간만큼 즉시 생성"]
+    D2 --> E2["2개월 차 개시 시점<br/>자동 생성 + 알림 발송"]
+    D3 --> E3["2회차 결제 완료<br/>자격 발생 알림"]
+    E3 --> D4
+    D1 --> F["스타일 패스 이용 중<br/>기간 확인: 라운지 · MY 결제 내역"]
+    E2 --> F
+    D4 --> F
+    F --> G["프리미엄 결제 갱신<br/>동일 기간으로 자동 재생성"]
+    F --> H["프리미엄 해지 · 환불 · 만료<br/>스타일 패스 즉시 종료"]
+    G -.-> F
+    classDef free fill:#E1F5EE,stroke:#0F6E56,color:#04342C
+    classDef wait fill:#FAEEDA,stroke:#854F0B,color:#412402
+    classDef none fill:#F1EFE8,stroke:#5F5E5A,color:#2C2C2A
+    class C1,C4,D1,D4,F,G free
+    class C2,D2,E2 wait
+    class A,B,C3,D3,E3,H none
+</pre>
+<div class="legend">
+  <span><span class="pill free">청록</span> 즉시 무료 이용 가능</span>
+  <span><span class="pill wait">주황</span> 예약 후 대기</span>
+  <span><span class="pill none">회색</span> 대상 아님 또는 시작·종료</span>
+</div>
+</div>
+<ul>
+  <li>점선 화살표는 프리미엄 결제 주기마다 반복되는 자동 재생성을 의미한다.</li>
+  <li>Mermaid 미지원 환경에서는 동봉된 <code>스타일패스_프로세스_안내도.svg</code> 파일을 사용한다.</li>
+</ul>
+</section>
+
+<!-- 2 -->
+<section id="s2">
+<h2><span class="n">2</span>프리미엄 계정 결제 유형</h2>
+<div class="tbl"><table>
+<thead><tr><th>결제 유형</th><th>이용 기간</th><th class="c">자동 갱신</th><th class="c">1개월 차(1회차) 무료 예약</th><th class="c">1개월 차 패스 즉시 이용</th></tr></thead>
+<tbody>
+<tr><td><strong>1개월 단건</strong></td><td>1개월</td><td class="c">없음</td><td class="c"><span class="pill no">불가</span></td><td class="c"><span class="pill none">불가</span></td></tr>
+<tr><td><strong>1개월 정기</strong></td><td>1개월</td><td class="c">있음</td><td class="c"><span class="pill wait">가능</span></td><td class="c"><span class="pill none">불가</span></td></tr>
+<tr><td><strong>6개월 정기</strong></td><td>6개월</td><td class="c">있음</td><td class="c">해당 없음</td><td class="c"><span class="pill free">가능</span></td></tr>
+</tbody></table></div>
+<div class="note"><p><strong>6개월 정기가 예외인 이유</strong> — 결제 시점에 이미 2개월 차 이상의 이용이 확정되므로, 자격 조건(P1)을 결제와 동시에 충족한 것으로 간주한다.</p></div>
+<div class="note"><p><strong>1개월 단건이 예약 불가인 이유</strong> — 자동 갱신이 없어 다음 결제 시점을 예측할 수 없으므로, 예약 상태를 유지할 기준 시점이 성립하지 않는다. 단건 사용자는 <strong>2회차 결제가 실제로 발생한 시점</strong>에 무료 받기 대상이 된다.</p></div>
+</section>
+
+<!-- 3 -->
+<section id="s3">
+<h2><span class="n">3</span>상태별 처리 규칙</h2>
+
+<h3>3.1 프리미엄 1개월 차 — 1개월 정기</h3>
+<ul>
+  <li>패스 <strong>즉시 이용 불가</strong>. <strong>무료 예약</strong>만 가능하다.</li>
+  <li>예약 완료 시 상태는 <code>예약 완료(대기)</code>이며, 상품은 아직 생성되지 않는다.</li>
+  <li><strong>2개월 차 개시 시점</strong>에 상품이 자동 생성되고 <strong>알림이 발송</strong>된다.</li>
+  <li>즉시 이용을 원하는 경우 <strong>6개월 정기로 업그레이드</strong>해야 한다. 업그레이드 시 즉시 생성 규칙(3.2)을 따른다.</li>
+</ul>
+
+<h3>3.1-1 프리미엄 1개월 차 — 1개월 단건</h3>
+<ul>
+  <li><strong>무료 예약이 불가능하다.</strong> 1회차 결제 기간 중에는 패스 관련 어떠한 신청도 접수되지 않는다.</li>
+  <li>라운지에는 "2회차 결제부터 무료 이용 가능" 안내만 노출한다.</li>
+  <li><strong>2회차 결제가 완료되는 시점</strong>에 무료 받기 대상이 되며, 이때부터 3.3의 규칙을 따른다.</li>
+  <li>2회차 결제 완료 시 무료 이용 자격이 생겼음을 <strong>알림으로 안내</strong>한다.</li>
+</ul>
+
+<h3>3.2 프리미엄 6개월 정기 (1개월 차 포함)</h3>
+<ul>
+  <li>결제 즉시 패스가 생성되며, <strong>이용 기간은 프리미엄 결제 기간과 동일(6개월)</strong>하다.</li>
+  <li>별도 예약 단계 없이 바로 이용 가능하다.</li>
+</ul>
+
+<h3>3.3 프리미엄 2개월 차 이상 (전 결제 유형)</h3>
+<ul>
+  <li>라운지에서 <strong>무료 받기</strong>를 실행하면 <strong>현재 진행 중인 프리미엄 이용 기간(잔여 기간)만큼</strong> 상품이 즉시 생성된다.</li>
+  <li>즉, 최초 1회는 프리미엄 기간의 중간부터 시작되므로 프리미엄 종료일과 패스 종료일이 일치한다.</li>
+  <li>그 이후의 처리는 1개월 차에 예약한 경우와 동일하다(3.4).</li>
+</ul>
+
+<h3>3.4 갱신 (동기 생성)</h3>
+<ul>
+  <li>프리미엄 계정을 계속 이용하는 한, <strong>프리미엄 결제가 발생할 때마다</strong> 동일 기간의 패스가 무료로 자동 생성된다.</li>
+  <li>재신청·재예약 절차는 필요하지 않다.</li>
+  <li>패스의 시작일·종료일은 항상 해당 회차 프리미엄의 시작일·종료일과 일치한다.</li>
+</ul>
+
+<h3>3.5 종료</h3>
+<ul>
+  <li>프리미엄 계정이 <strong>해지 / 환불 / 만료</strong> 등의 사유로 종료되면 <strong>스타일 패스도 함께 종료</strong>된다.</li>
+  <li>패스 단독으로 잔여 기간이 유지되지 않는다.</li>
+</ul>
+</section>
+
+<!-- 4 -->
+<section id="s4">
+<h2><span class="n">4</span>시나리오 매트릭스</h2>
+<div class="tbl"><table>
+<thead><tr><th>#</th><th>상황</th><th>사용자 행동</th><th>결과</th></tr></thead>
+<tbody>
+<tr><td class="id">S1</td><td>1개월 정기 · 1개월 차</td><td>무료 예약</td><td><span class="pill wait">대기</span> 2개월 차 개시 시 자동 생성 + 알림</td></tr>
+<tr><td class="id">S2</td><td>1개월 정기 · 1개월 차</td><td>6개월 정기로 업그레이드</td><td><span class="pill free">즉시 생성</span> 6개월</td></tr>
+<tr><td class="id">S3</td><td>1개월 단건 · 1회차</td><td>예약 시도</td><td><span class="pill no">불가</span> 2회차 결제부터 무료 이용 가능함을 안내</td></tr>
+<tr><td class="id">S3-1</td><td>1개월 단건 · 2회차 결제 완료</td><td>무료 받기</td><td><span class="pill free">즉시 생성</span> 2회차 잔여 기간만큼 + 자격 발생 알림</td></tr>
+<tr><td class="id">S4</td><td>6개월 정기 신규 가입</td><td>별도 행동 없음 / 무료 받기</td><td><span class="pill free">즉시 생성</span> 프리미엄과 동일 6개월</td></tr>
+<tr><td class="id">S5</td><td>1개월 정기 · 3개월 차</td><td>무료 받기</td><td><span class="pill free">즉시 생성</span> 3개월 차 잔여 기간만큼. 이후 결제마다 자동 생성</td></tr>
+<tr><td class="id">S6</td><td>패스 이용 중</td><td>프리미엄 해지</td><td><span class="pill none">즉시 종료</span></td></tr>
+<tr><td class="id">S7</td><td>패스 이용 중</td><td>프리미엄 환불</td><td><span class="pill none">즉시 종료</span></td></tr>
+</tbody></table></div>
+</section>
+
+<!-- 5 -->
+<section id="s5">
+<h2><span class="n">5</span>알림 정책</h2>
+<div class="tbl"><table>
+<thead><tr><th>트리거</th><th>발송 시점</th><th>핵심 메시지</th></tr></thead>
+<tbody>
+<tr><td>무료 예약 완료</td><td>예약 즉시</td><td>예약이 완료되었으며 2개월 차 시작 시 자동 지급됨을 안내</td></tr>
+<tr><td><strong>예약분 자동 생성</strong></td><td>2개월 차 개시 시점</td><td><strong>패스가 생성되어 지금부터 이용 가능함을 안내</strong> <span class="pill no">필수</span></td></tr>
+<tr><td><strong>무료 자격 발생 (단건)</strong></td><td>1개월 단건 2회차 결제 완료 시</td><td>무료 이용 자격이 생겼으니 무료 받기를 실행하도록 안내</td></tr>
+<tr><td>무료 받기 완료</td><td>실행 즉시</td><td>이용 시작일·종료일 안내</td></tr>
+<tr><td>갱신 생성</td><td>프리미엄 결제 성공 시</td><td>패스가 동일 기간으로 연장되었음을 안내</td></tr>
+<tr><td>동반 종료</td><td>프리미엄 종료 시</td><td>프리미엄 종료로 패스도 함께 종료되었음을 안내</td></tr>
+</tbody></table></div>
+</section>
+
+<!-- 6 -->
+<section id="s6">
+<h2><span class="n">6</span>기능별 진입 경로</h2>
+
+<h3>6.1 경로 매트릭스</h3>
+<div class="tbl"><table>
+<thead><tr><th>기능</th><th class="c">프리미엄 계정 라운지</th><th class="c">스타일 패스 결제하기</th><th class="c">MY 결제 내역</th></tr></thead>
+<tbody>
+<tr><td><strong>무료 예약</strong><br><small>1개월 정기 1개월 차 한정</small></td><td class="c"><span class="mark yes" aria-label="가능">○</span></td><td class="c"><span class="mark no" aria-label="불가">✕</span></td><td class="c"><span class="mark no" aria-label="불가">✕</span></td></tr>
+<tr><td><strong>무료 받기</strong><br><small>2개월 차 · 2회차 이상</small></td><td class="c"><span class="mark yes" aria-label="가능">○</span></td><td class="c"><span class="mark yes" aria-label="가능">○</span></td><td class="c"><span class="mark no" aria-label="불가">✕</span></td></tr>
+<tr><td><strong>이용기간 확인</strong></td><td class="c"><span class="mark yes" aria-label="가능">○</span></td><td class="c"><span class="mark no" aria-label="불가">✕</span></td><td class="c"><span class="mark yes" aria-label="가능">○</span></td></tr>
+</tbody></table></div>
+<ul>
+  <li><strong>무료 예약</strong>은 프리미엄 계정 라운지에서만 가능하며, <strong>1개월 정기 이용자에게만</strong> 노출한다. 1개월 단건 이용자에게는 예약 CTA를 노출하지 않는다. 1개월 차 시점에는 아직 상품이 존재하지 않으므로 결제 경로나 MY 결제 내역에는 노출되지 않는다.</li>
+  <li><strong>무료 받기</strong>는 라운지 외에 <strong>스타일 패스 결제하기 경로</strong>에서도 실행할 수 있다. 즉, 패스를 유료로 구매하려던 프리미엄 2개월 차 이상 사용자는 결제 단계에서 무료 지급 대상임을 안내받고 결제 없이 바로 수령한다.</li>
+  <li><strong>이용기간 확인</strong>은 라운지와 <strong>MY 결제 내역</strong> 양쪽에서 가능하다. 무료 제공분이라도 MY 결제 내역에는 일반 상품과 동일하게 표시된다.</li>
+</ul>
+
+<h3>6.2 스타일 패스 결제하기 경로에서의 처리</h3>
+<div class="tbl"><table>
+<thead><tr><th>사용자 상태</th><th>결제 화면 처리</th></tr></thead>
+<tbody>
+<tr><td>프리미엄 미이용</td><td>정상 결제 진행 (혜택 안내 없음 또는 프리미엄 가입 유도)</td></tr>
+<tr><td>프리미엄 1개월 차 · 1개월 정기</td><td>정상 결제 진행 + <strong>라운지에서 무료 예약 가능함을 안내</strong></td></tr>
+<tr><td>프리미엄 1회차 · 1개월 단건</td><td>정상 결제 진행 + <strong>2회차 결제부터 무료 이용 가능함을 안내</strong> (예약 안내 금지)</td></tr>
+<tr><td>프리미엄 2개월 차 이상 · 미수령</td><td><strong>결제 차단 후 무료 받기로 전환</strong>. 결제 금액이 발생하지 않도록 처리한다.</td></tr>
+<tr><td>이미 무료 이용 중</td><td>중복 결제 방지. 이용 중임을 안내하고 이용기간 표시</td></tr>
+</tbody></table></div>
+<div class="note warn"><p><strong>주의</strong> — 2개월 차 이상 사용자가 결제 경로에서 유료 결제를 완료해 버리는 상황이 발생하지 않도록, 결제 요청 시점에 무료 지급 자격을 서버에서 재검증해야 한다.</p></div>
+
+<h3>6.3 프리미엄 계정 라운지 노출 규칙</h3>
+<p>라운지에서 사용자 상태에 따라 아래와 같이 노출한다.</p>
+<div class="tbl"><table>
+<thead><tr><th>사용자 상태</th><th>노출 문구 방향</th><th>CTA</th></tr></thead>
+<tbody>
+<tr><td>1개월 차 · 1개월 정기 · 미예약</td><td>2개월 차부터 무료 제공됨을 안내</td><td><code>무료 예약하기</code> / <code>6개월 정기로 바로 이용하기</code></td></tr>
+<tr><td>1회차 · 1개월 단건</td><td><strong>2회차 결제부터 무료 이용 가능함을 안내</strong></td><td><code>6개월 정기로 바로 이용하기</code> (예약 CTA 없음)</td></tr>
+<tr><td>1개월 차 · 예약 완료</td><td>지급 예정일 안내</td><td>(CTA 없음)</td></tr>
+<tr><td>2개월 차 이상 · 미수령</td><td>지금 바로 무료 이용 가능함을 안내</td><td><code>무료 받기</code></td></tr>
+<tr><td>이용 중</td><td>이용 기간(시작일~종료일) 표시</td><td>상품 진입</td></tr>
+<tr><td>종료</td><td>프리미엄 재가입 유도</td><td><code>프리미엄 재구독</code></td></tr>
+</tbody></table></div>
+</section>
+
+<!-- 7 -->
+<section id="s7">
+<h2><span class="n">7</span>요약</h2>
+<div class="summary"><p>스타일 패스는 <strong>프리미엄 2개월 차부터 무료</strong>이며, <strong>1개월 정기는 1개월 차에 예약만 가능</strong>, <strong>1개월 단건은 예약 없이 2회차 결제 시점부터 무료 받기</strong>, <strong>6개월 정기는 즉시 이용</strong>이 가능하다. 이후에는 <strong>프리미엄 결제 주기에 맞춰 자동으로 재생성</strong>되고 <strong>프리미엄이 끝나면 함께 종료</strong>된다.</p></div>
+</section>
+</main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.min.js"></script>
+<script>
+  try {
+    mermaid.initialize({ startOnLoad: true, theme: "base", securityLevel: "loose",
+      flowchart: { curve: "basis", htmlLabels: true },
+      themeVariables: { fontFamily: '"Pretendard Variable", Pretendard, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif', fontSize: "14px", lineColor: "#8A8F8B" } });
+  } catch (e) { console.error(e); }
+</script>
+</body>
+</html>
